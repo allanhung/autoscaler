@@ -7,6 +7,14 @@ Cluster Autoscaler is a tool that automatically adjusts the size of the Kubernet
   resources.
 * there are nodes in the cluster that have been underutilized for an extended period of time and their pods can be placed on other existing nodes.
 
+# How to build
+```
+cp Dockerfile.builder /tmp/
+git checkout <tag>
+cp /tmp/Dockerfile.builder .
+docker build -t cluster-autoscaler:<image_tag> Dockerfile.builder
+```
+
 # FAQ/Documentation
 
 An FAQ is available [HERE](./FAQ.md).
